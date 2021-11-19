@@ -17,7 +17,7 @@ while [ $i -le $count ]
 do
 	echo "mkdir -p download_part$i" | bash
 
-        echo "cd download_part$i && wget -i ../list/download_part${i}.list && cd .."
+        echo "cd download_part$i && wget -i ../list/download_part${i}.list && cd .." | bash
 	
 	echo "tar zcmpf ../package/download_part${i}.tar.gz download_part$i/" | bash
 
